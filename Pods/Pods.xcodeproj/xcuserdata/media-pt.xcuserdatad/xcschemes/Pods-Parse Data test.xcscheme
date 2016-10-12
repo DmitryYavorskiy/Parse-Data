@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1DAD7FA1DA7CE66003A6AE8"
-               BuildableName = "Parse Data test.app"
-               BlueprintName = "Parse Data test"
-               ReferencedContainer = "container:Parse Data test.xcodeproj">
+               BlueprintIdentifier = "283595D7AEE201A9D1718B0CF54C4857"
+               BuildableName = "Pods_Parse_Data_test.framework"
+               BlueprintName = "Pods-Parse Data test"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1DAD7FA1DA7CE66003A6AE8"
-            BuildableName = "Parse Data test.app"
-            BlueprintName = "Parse Data test"
-            ReferencedContainer = "container:Parse Data test.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,23 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1DAD7FA1DA7CE66003A6AE8"
-            BuildableName = "Parse Data test.app"
-            BlueprintName = "Parse Data test"
-            ReferencedContainer = "container:Parse Data test.xcodeproj">
+            BlueprintIdentifier = "283595D7AEE201A9D1718B0CF54C4857"
+            BuildableName = "Pods_Parse_Data_test.framework"
+            BlueprintName = "Pods-Parse Data test"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OS_ACTIVITY_MODE"
-            value = "disable"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -77,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E1DAD7FA1DA7CE66003A6AE8"
-            BuildableName = "Parse Data test.app"
-            BlueprintName = "Parse Data test"
-            ReferencedContainer = "container:Parse Data test.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

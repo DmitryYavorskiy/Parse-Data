@@ -1,0 +1,17 @@
+PODS:
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - UIScrollView-InfiniteScroll (0.9.1)
+
+DEPENDENCIES:
+  - SDWebImage (~> 3.8)
+  - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  UIScrollView-InfiniteScroll: 14e204c50ca4040467e1cbfa141dad7a18919b56
+
+PODFILE CHECKSUM: 2c0f64ec98beab884a2fbe4c3f474cf59eccae7e
+
+COCOAPODS: 1.0.1
