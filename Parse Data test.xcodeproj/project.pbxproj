@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		644952CC9143009970320BB7 /* Pods_Parse_Data_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A415D22BFE3F4467712C5CA /* Pods_Parse_Data_test.framework */; };
+		1B9EA433335B9CE824784144 /* Pods_Parse_Data_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAABB7D5C3D27E7121B283BE /* Pods_Parse_Data_test.framework */; };
+		E15041341DBE16D300126288 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15041331DBE16D300126288 /* QuartzCore.framework */; };
+		E15E76B31DC34C610027C3D4 /* URLConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E76B21DC34C610027C3D4 /* URLConfigurator.swift */; };
+		E17534061DCB3DB400F6C704 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17534051DCB3DB400F6C704 /* WebViewController.swift */; };
 		E1790BE31DAD0DF900C45795 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1790BE21DAD0DF900C45795 /* InternetConnection.swift */; };
 		E1790BE71DAD121D00C45795 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1790BE61DAD121D00C45795 /* Reachability.swift */; };
 		E1790BEA1DAD213500C45795 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1790BE91DAD213400C45795 /* CustomCell.swift */; };
@@ -19,12 +22,18 @@
 		E1DAD8111DA7CEFA003A6AE8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAD8101DA7CEFA003A6AE8 /* APIRequest.swift */; };
 		E1DAD8131DA7D9E0003A6AE8 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAD8121DA7D9E0003A6AE8 /* DataRequest.swift */; };
 		E1DAD8151DA7E442003A6AE8 /* DataMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAD8141DA7E442003A6AE8 /* DataMask.swift */; };
+		E1EFB03A1DBE1ECD0041B0DE /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15041461DBE1ABD00126288 /* SDWebImage.framework */; };
+		E1EFB03C1DBE421B0041B0DE /* UIScrollView_InfiniteScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EFB03B1DBE421B0041B0DE /* UIScrollView_InfiniteScroll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53AA990C9C4B8CF758AF13B3 /* Pods-Parse Data test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse Data test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parse Data test/Pods-Parse Data test.release.xcconfig"; sourceTree = "<group>"; };
-		7A415D22BFE3F4467712C5CA /* Pods_Parse_Data_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parse_Data_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6001516CDD49DCED7B33284 /* Pods-Parse Data test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse Data test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parse Data test/Pods-Parse Data test.debug.xcconfig"; sourceTree = "<group>"; };
+		E15041331DBE16D300126288 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E15041461DBE1ABD00126288 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/Parse_Data_test-ecwvglznrvzjqyhbkrbqbvhwijhb/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		E15041481DBE1AC600126288 /* SVPullToRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVPullToRefresh.framework; path = "../../../Library/Developer/Xcode/DerivedData/Parse_Data_test-ecwvglznrvzjqyhbkrbqbvhwijhb/Build/Products/Debug-iphonesimulator/SVPullToRefresh/SVPullToRefresh.framework"; sourceTree = "<group>"; };
+		E15E76B21DC34C610027C3D4 /* URLConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConfigurator.swift; sourceTree = "<group>"; };
+		E17534051DCB3DB400F6C704 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E1790BE21DAD0DF900C45795 /* InternetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		E1790BE61DAD121D00C45795 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E1790BE91DAD213400C45795 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -38,6 +47,8 @@
 		E1DAD8101DA7CEFA003A6AE8 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E1DAD8121DA7D9E0003A6AE8 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		E1DAD8141DA7E442003A6AE8 /* DataMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMask.swift; sourceTree = "<group>"; };
+		E1EFB03B1DBE421B0041B0DE /* UIScrollView_InfiniteScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIScrollView_InfiniteScroll.framework; path = "../../../Library/Developer/Xcode/DerivedData/Parse_Data_test-ecwvglznrvzjqyhbkrbqbvhwijhb/Build/Products/Debug-iphonesimulator/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework"; sourceTree = "<group>"; };
+		EAABB7D5C3D27E7121B283BE /* Pods_Parse_Data_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parse_Data_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				644952CC9143009970320BB7 /* Pods_Parse_Data_test.framework in Frameworks */,
+				E1EFB03C1DBE421B0041B0DE /* UIScrollView_InfiniteScroll.framework in Frameworks */,
+				E1EFB03A1DBE1ECD0041B0DE /* SDWebImage.framework in Frameworks */,
+				E15041341DBE16D300126288 /* QuartzCore.framework in Frameworks */,
+				1B9EA433335B9CE824784144 /* Pods_Parse_Data_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +69,11 @@
 		AF27BC59B26AB85073E2C240 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7A415D22BFE3F4467712C5CA /* Pods_Parse_Data_test.framework */,
+				E1EFB03B1DBE421B0041B0DE /* UIScrollView_InfiniteScroll.framework */,
+				E15041481DBE1AC600126288 /* SVPullToRefresh.framework */,
+				E15041461DBE1ABD00126288 /* SDWebImage.framework */,
+				E15041331DBE16D300126288 /* QuartzCore.framework */,
+				EAABB7D5C3D27E7121B283BE /* Pods_Parse_Data_test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,6 +92,7 @@
 			children = (
 				E1DAD8101DA7CEFA003A6AE8 /* APIRequest.swift */,
 				E1DAD8121DA7D9E0003A6AE8 /* DataRequest.swift */,
+				E15E76B21DC34C610027C3D4 /* URLConfigurator.swift */,
 				E1DAD8141DA7E442003A6AE8 /* DataMask.swift */,
 				E1790BE21DAD0DF900C45795 /* InternetConnection.swift */,
 				E1790BE61DAD121D00C45795 /* Reachability.swift */,
@@ -104,6 +123,7 @@
 			children = (
 				E1DAD7FE1DA7CE66003A6AE8 /* AppDelegate.swift */,
 				E1DAD8001DA7CE66003A6AE8 /* ViewController.swift */,
+				E17534051DCB3DB400F6C704 /* WebViewController.swift */,
 				E1790BE91DAD213400C45795 /* CustomCell.swift */,
 				E1790BE81DAD1E1400C45795 /* Data Parse */,
 				E1DAD8021DA7CE66003A6AE8 /* Main.storyboard */,
@@ -149,6 +169,7 @@
 				TargetAttributes = {
 					E1DAD7FA1DA7CE66003A6AE8 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -240,8 +261,10 @@
 				E1790BE71DAD121D00C45795 /* Reachability.swift in Sources */,
 				E1DAD8151DA7E442003A6AE8 /* DataMask.swift in Sources */,
 				E1DAD8011DA7CE66003A6AE8 /* ViewController.swift in Sources */,
+				E17534061DCB3DB400F6C704 /* WebViewController.swift in Sources */,
 				E1DAD8111DA7CEFA003A6AE8 /* APIRequest.swift in Sources */,
 				E1DAD7FF1DA7CE66003A6AE8 /* AppDelegate.swift in Sources */,
+				E15E76B31DC34C610027C3D4 /* URLConfigurator.swift in Sources */,
 				E1790BE31DAD0DF900C45795 /* InternetConnection.swift in Sources */,
 				E1790BEA1DAD213500C45795 /* CustomCell.swift in Sources */,
 				E1DAD8131DA7D9E0003A6AE8 /* DataRequest.swift in Sources */,
@@ -368,10 +391,15 @@
 			baseConfigurationReference = A6001516CDD49DCED7B33284 /* Pods-Parse Data test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Parse Data test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "media-pt.Parse-Data-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -381,10 +409,14 @@
 			baseConfigurationReference = 53AA990C9C4B8CF758AF13B3 /* Pods-Parse Data test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Parse Data test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "media-pt.Parse-Data-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

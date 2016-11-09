@@ -125,7 +125,7 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
 #endif
     
     // Default row height (44) minus activity indicator height (22) / 2
-    _indicatorMargin = 30;
+    _indicatorMargin = 11;
     
     return self;
 }
@@ -171,7 +171,7 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
 
 - (void)removeInfiniteScroll {
     _PBInfiniteScrollState *state = self.pb_infiniteScrollState;
-    
+    NSLog(@"removeInfiniteScroll");
     // Ignore multiple calls to remove infinite scroll
     if(!state.initialized) {
         return;
@@ -440,7 +440,7 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
     CGFloat extraBottomInset = adjustedContentHeight - self.contentSize.height;
     
     // Add empty space padding
-    contentInset.bottom += extraBottomInset;
+    contentInset.bottom = extraBottomInset + 80;
     
     // Save indicator view inset
     state.indicatorInset = indicatorInset;
@@ -481,12 +481,20 @@ static const void *kPBInfiniteScrollStateKey = &kPBInfiniteScrollStateKey;
     if([self isKindOfClass:[UITableView class]]) {
         PBForceUpdateTableViewContentSize((UITableView *)self);
     }
+    NSLog(@"finishInfiniteScroll");
+    if (state.initialized == NO) {
+        // Remove row height inset
+        contentInset.bottom = state.indicatorInset;
+        
+        // Remove extra inset added to pad infinite scroll
+        contentInset.bottom = state.extraBottomInset;
+    }
     
     // Remove row height inset
-    contentInset.bottom -= state.indicatorInset;
+    //contentInset.bottom -= state.indicatorInset;
     
     // Remove extra inset added to pad infinite scroll
-    contentInset.bottom -= state.extraBottomInset;
+    //contentInset.bottom -= state.extraBottomInset;
     
     // Reset indicator view inset
     state.indicatorInset = 0;

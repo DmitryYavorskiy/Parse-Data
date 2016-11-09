@@ -14,17 +14,18 @@ struct DataMask {
         
         switch type {
         case MethodName.getFeed:
+            
             var dictData = NSDictionary()
-            let pathDict = (dictionary.value(forKey: "responses") as? NSDictionary)?.value(forKey: "feed") as? NSArray
             
-            let avatarUrl = pathDict?.value(forKey: "avatar_url") as? NSArray
-            let name = pathDict?.value(forKey: "name") as? NSArray
-            let userName = pathDict?.value(forKey: "user_name") as? NSArray
+            let pathArray = dictionary.value(forKeyPath: "responses.feed") as? NSArray
+            let avatarUrl = pathArray?.value(forKey: "avatar_url") as? NSArray
+            let name = pathArray?.value(forKey: "name") as? NSArray
+            let userName = pathArray?.value(forKey: "user_name") as? NSArray
             
-            dictData = ["avatarUrl" : avatarUrl, "name" : name, "userName" : userName]
+            dictData = ["avatarUrl" : avatarUrl ?? ["https://numpor.kaust.edu.sa/_layouts/KAUST_ResearchCenters_Template/images/DefaultPersonPhoto.png"], "name" : name ?? ["Palce"], "userName" : userName ?? ["User"]]
             
             completionHandler(true, dictData)
-            break
+            
         default:
             print("error")
         }

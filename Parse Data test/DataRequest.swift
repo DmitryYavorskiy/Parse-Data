@@ -21,38 +21,31 @@ enum MethodHttp: String {
 
 struct DataRequest {
     
-    static func getData(dictionaryDta: NSDictionary, methodName: MethodName, completionHandler:((_ succes: Bool, _ info: NSDictionary) -> Void)!) {
+    static func getData(dictionaryData: NSDictionary, dictHttpBody: NSDictionary?, methodName: MethodName, completionHandler:((_ succes: Bool, _ info: NSDictionary) -> Void)!) {
         
         let internetStatus = InternetConnection.checkInternetConnection()
         
         if internetStatus == true {
-            switch methodName {
-            case MethodName.getFeed:
+            
+            let configuration: UrlConfig = URLConfigurator.configureUrl(dictionaryData: dictionaryData, dictHttpBody: dictHttpBody, methodName: methodName)
+            
+            APIRequest.getRequest(urlString: configuration.urlString!, methodHttp: configuration.methodHttp, post: nil, completionHandler: { (succes, info) in
                 
-                let offset = dictionaryDta.value(forKey: "offset")
-                let limit =  dictionaryDta.value(forKey: "limit")
-                
-                let urlString = "\(API_URL)getfeed?offset=\(offset!)&limit=\(limit!)"
-                
-                APIRequest.getRequest(urlString: urlString, methodHttp: MethodHttp.get.rawValue, post: "", completionHandler: { (succes, info) in
-                    if succes == true {
-                        let errorMeta = (info.value(forKey: "meta") as? NSDictionary)?.value(forKey: "status") as! Int
-                        if errorMeta == 200 {
-                            DataMask.parseData(dictionary: info, type: .getFeed, completionHandler: { (succes: Bool, dict: NSDictionary) in
-                                completionHandler(succes, dict)
-                            })
-                        } else {
-                            print("errorMeta error")
-                        }
+                if succes == true {
+                    
+                    let errorMeta = info.value(forKeyPath: "meta.status") as! Int
+                    
+                    if errorMeta == 200 {
+                        DataMask.parseData(dictionary: info, type: methodName, completionHandler: { (succes: Bool, dict: NSDictionary) in
+                            completionHandler(succes, dict)
+                        })
                     } else {
-                        print("succes error")
+                        print("errorMeta error")
                     }
-                })
-                
-                break
-            default:
-                print("error")
-            }            
+                } else {
+                    print("succes error")
+                }
+            })
         } else {
             print("internet Error")
         }
