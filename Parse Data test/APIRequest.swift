@@ -17,9 +17,12 @@ struct APIRequest {
     
     static func getRequest(urlString: String, methodHttp: String, post: String?, completionHandler:((_ succes: Bool, _ info: NSDictionary) -> Void)!) {
         
+        let internetStatus = InternetConnection.checkInternetConnection()
+        let cachePolicy: NSURLRequest.CachePolicy = internetStatus ? .reloadIgnoringLocalCacheData : .returnCacheDataElseLoad
+        
         let encodedString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
-        let url = NSURL(string: encodedString!)
-        let request = NSMutableURLRequest(url:url as! URL)
+        let url = URL(string: encodedString!)
+        let request = NSMutableURLRequest(url: url!, cachePolicy: cachePolicy, timeoutInterval: 10.0)
         request.httpMethod = methodHttp
         
         if methodHttp == "POST" {
@@ -28,6 +31,7 @@ struct APIRequest {
         }
         
         request.setValue("REVIZORAPP/\(APP_Ver!) IOS/\(IOS_VER)", forHTTPHeaderField: "User-agent")
+        request.addValue("private", forHTTPHeaderField: "Cache-Control")
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)

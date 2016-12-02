@@ -25,7 +25,7 @@ struct DataRequest {
         
         let internetStatus = InternetConnection.checkInternetConnection()
         
-        if internetStatus == true {
+        if internetStatus == true || internetStatus == false {
             
             let configuration: UrlConfig = URLConfigurator.configureUrl(dictionaryData: dictionaryData, dictHttpBody: dictHttpBody, methodName: methodName)
             
